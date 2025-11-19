@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Office 2024 - Guru Admin{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="office-container">
+        <!-- Office Header -->
+        {% include 'components/header.html' %}
+
+        <!-- Ribbon Menu -->
+        {% include 'components/ribbon.html' %}
+
+        <!-- Main Content Area -->
+        <div class="main-content">
+            {% block content %}{% endblock %}
+        </div>
+
+        <!-- Status Bar -->
+        {% include 'components/status_bar.html' %}
+    </div>
+
+    <!-- Modern Dialogs -->
+    <div class="modern-overlay" id="overlay" onclick="closeAllDialogs()"></div>
+    
+    {% include 'dialogs/rekap_absensi_dialog.html' %}
+    {% include 'dialogs/tambah_jurnal_dialog.html' %}
+    {% include 'dialogs/tambah_kelas_dialog.html' %}
+    {% include 'dialogs/tambah_siswa_dialog.html' %}
+    {% include 'dialogs/import_siswa_dialog.html' %}
+    {% include 'dialogs/tambah_materi_dialog.html' %}
+    {% include 'dialogs/tambah_semester_dialog.html' %}
+    {% include 'dialogs/theme_selector_dialog.html' %}
+    {% include 'dialogs/restore_database_dialog.html' %}
+    {% include 'dialogs/reset_database_dialog.html' %}
+
+    <!-- Load semua JavaScript files -->
+<!-- Load semua JavaScript files -->
+<script src="{{ url_for('static', filename='js/modules/utils.js') }}"></script>
+<script src="{{ url_for('static', filename='js/modules/api.js') }}"></script>
+<script src="{{ url_for('static', filename='js/modules/ui.js') }}"></script>
+<script src="{{ url_for('static', filename='js/modules/theme.js') }}"></script>
+<script src="{{ url_for('static', filename='js/modules/dashboard.js') }}"></script>
+<script src="{{ url_for('static', filename='js/modules/kelas.js') }}"></script>
+<script src="{{ url_for('static', filename='js/modules/siswa.js') }}"></script>
+<script src="{{ url_for('static', filename='js/modules/materi.js') }}"></script>
+<script src="{{ url_for('static', filename='js/modules/semester.js') }}"></script>
+<script src="{{ url_for('static', filename='js/modules/absensi.js') }}"></script>
+<script src="{{ url_for('static', filename='js/modules/nilai.js') }}"></script>
+<script src="{{ url_for('static', filename='js/modules/jurnal.js') }}"></script>
+<script src="{{ url_for('static', filename='js/modules/legger.js') }}"></script>
+<script src="{{ url_for('static', filename='js/modules/database.js') }}"></script>
+<script src="{{ url_for('static', filename='js/app.js') }}"></script>
+</body>
+</html>

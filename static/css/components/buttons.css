@@ -1,0 +1,169 @@
+/* Standard Ribbon Buttons */
+.ribbon-buttons {
+    display: flex;
+    gap: 4px;
+    flex-wrap: wrap;
+}
+
+.ribbon-btn {
+    padding: 8px 12px;
+    background: transparent;
+    border: 1px solid var(--office-border);
+    border-radius: 4px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    font-size: 11px;
+    color: var(--office-text);
+    transition: all 0.2s;
+    min-width: 60px;
+}
+
+.ribbon-btn:hover {
+    background: var(--office-gray-light);
+    border-color: var(--office-gray-dark);
+}
+
+.ribbon-btn i {
+    font-size: 16px;
+    color: var(--icon-color);
+}
+
+/* Ribbon Button Variants */
+.ribbon-btn.primary {
+    background: var(--office-blue);
+    border-color: var(--office-blue);
+    color: white;
+}
+
+.ribbon-btn.primary:hover {
+    background: var(--office-blue-dark);
+    border-color: var(--office-blue-dark);
+}
+
+.ribbon-btn.primary i {
+    color: white;
+}
+
+.ribbon-btn.success {
+    background: var(--office-success);
+    border-color: var(--office-success);
+    color: white;
+}
+
+.ribbon-btn.success:hover {
+    background: #0D6B0D;
+    border-color: #0D6B0D;
+}
+
+.ribbon-btn.success i {
+    color: white;
+}
+
+.ribbon-btn.warning {
+    background: var(--office-warning);
+    border-color: var(--office-warning);
+    color: white;
+}
+
+.ribbon-btn.warning:hover {
+    background: #B32D00;
+    border-color: #B32D00;
+}
+
+.ribbon-btn.warning i {
+    color: white;
+}
+
+.ribbon-btn.danger {
+    background: var(--office-danger);
+    border-color: var(--office-danger);
+    color: white;
+}
+
+.ribbon-btn.danger:hover {
+    background: #8c1d22;
+    border-color: #8c1d22;
+}
+
+.ribbon-btn.danger i {
+    color: white;
+}
+
+/* Modern Buttons */
+.modern-btn {
+    padding: 8px 16px;
+    border: 1px solid var(--office-border);
+    border-radius: 4px;
+    background: white;
+    color: var(--office-text);
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    transition: all 0.2s;
+}
+
+.modern-btn:hover {
+    background: var(--office-gray-light);
+    border-color: var(--office-gray-dark);
+}
+
+.modern-btn.primary {
+    background: var(--office-blue);
+    border-color: var(--office-blue);
+    color: white;
+}
+
+.modern-btn.primary:hover {
+    background: var(--office-blue-dark);
+    border-color: var(--office-blue-dark);
+}
+
+.modern-btn.success {
+    background: var(--office-success);
+    border-color: var(--office-success);
+    color: white;
+}
+
+.modern-btn.success:hover {
+    background: #0D6B0D;
+    border-color: #0D6B0D;
+}
+
+.modern-btn.warning {
+    background: var(--office-warning);
+    border-color: var(--office-warning);
+    color: white;
+}
+
+.modern-btn.warning:hover {
+    background: #B32D00;
+    border-color: #B32D00;
+}
+
+.modern-btn.danger {
+    background: var(--office-danger);
+    border-color: var(--office-danger);
+    color: white;
+}
+
+.modern-btn.danger:hover {
+    background: #8c1d22;
+    border-color: #8c1d22;
+}
+
+.modern-btn i {
+    color: var(--icon-color);
+}
+
+.modern-btn.primary i,
+.modern-btn.success i,
+.modern-btn.warning i,
+.modern-btn.danger i {
+    color: white;
+}

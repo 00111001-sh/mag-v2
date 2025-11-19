@@ -1,0 +1,86 @@
+<div class="modern-dialog" id="tambahKelasDialog">
+    <div class="dialog-header">
+        <h3>Tambah Kelas</h3>
+        <button class="dialog-close" onclick="closeDialog('tambahKelasDialog')">
+            <i class="fas fa-times"></i>
+        </button>
+    </div>
+    
+    <!-- Dialog Ribbon -->
+    <div class="dialog-ribbon">
+        <div class="dialog-ribbon-group">
+            <div class="dialog-ribbon-title">Actions</div>
+            <div class="dialog-ribbon-buttons">
+                <button class="dialog-ribbon-btn success" onclick="tambahKelas()">
+                    <i class="fas fa-save"></i>
+                    Simpan
+                </button>
+                <button class="dialog-ribbon-btn" onclick="closeDialog('tambahKelasDialog')">
+                    <i class="fas fa-times"></i>
+                    Batal
+                </button>
+            </div>
+        </div>
+        <div class="dialog-ribbon-group">
+            <div class="dialog-ribbon-title">Tools</div>
+            <div class="dialog-ribbon-buttons">
+                <button class="dialog-ribbon-btn" onclick="resetFormKelas()">
+                    <i class="fas fa-redo"></i>
+                    Reset
+                </button>
+            </div>
+        </div>
+    </div>
+    
+    <div class="dialog-body with-ribbon">
+        <div class="dialog-content">
+            <div class="dialog-section">
+                <div class="dialog-section-title">Informasi Kelas</div>
+                <div class="form-group">
+                    <label class="modern-label">Nama Kelas</label>
+                    <input type="text" class="modern-input" id="namaKelas" placeholder="Contoh: X IPA 1">
+                </div>
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label class="modern-label">Tingkat</label>
+                        <select class="modern-select" id="tingkatKelas">
+                            <option value="X">X</option>
+                            <option value="XI">XI</option>
+                            <option value="XII">XII</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label class="modern-label">Jurusan</label>
+                        <select class="modern-select" id="jurusanKelas">
+                            <option value="IPA">IPA</option>
+                            <option value="IPS">IPS</option>
+                            <option value="Bahasa">Bahasa</option>
+                            <option value="Umum">Umum</option>
+                            <option value="Listrik">Listrik</option>
+                            <option value="Elektronika">Elektronika</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="dialog-section">
+                <div class="dialog-section-title">Informasi Tambahan</div>
+                <div class="form-group">
+                    <label class="modern-label">Wali Kelas</label>
+                    <input type="text" class="modern-input" id="waliKelas" placeholder="Nama wali kelas">
+                </div>
+                <div class="form-group">
+                    <label class="modern-label">Kapasitas Siswa</label>
+                    <input type="number" class="modern-input" id="kapasitasKelas" placeholder="0" min="0" max="50" value="36">
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="dialog-footer">
+        <div class="dialog-footer-left">
+            <span>Sistem Administrasi Guru • Office 2024 v3.2</span>
+            <span id="kelasDialogDate">Loading...</span>
+        </div>
+    </div>
+</div>

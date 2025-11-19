@@ -1,0 +1,111 @@
+<div class="modern-dialog" id="tambahMateriDialog">
+    <div class="dialog-header">
+        <h3>Tambah Materi Pembelajaran</h3>
+        <button class="dialog-close" onclick="closeDialog('tambahMateriDialog')">
+            <i class="fas fa-times"></i>
+        </button>
+    </div>
+    
+    <!-- Dialog Ribbon -->
+    <div class="dialog-ribbon">
+        <div class="dialog-ribbon-group">
+            <div class="dialog-ribbon-title">Actions</div>
+            <div class="dialog-ribbon-buttons">
+                <button class="dialog-ribbon-btn success" onclick="tambahMateri()">
+                    <i class="fas fa-save"></i>
+                    Simpan
+                </button>
+                <button class="dialog-ribbon-btn" onclick="closeDialog('tambahMateriDialog')">
+                    <i class="fas fa-times"></i>
+                    Batal
+                </button>
+            </div>
+        </div>
+        <div class="dialog-ribbon-group">
+            <div class="dialog-ribbon-title">Tools</div>
+            <div class="dialog-ribbon-buttons">
+                <button class="dialog-ribbon-btn" onclick="resetFormMateri()">
+                    <i class="fas fa-redo"></i>
+                    Reset
+                </button>
+                <button class="dialog-ribbon-btn" onclick="previewMateri()">
+                    <i class="fas fa-eye"></i>
+                    Preview
+                </button>
+            </div>
+        </div>
+    </div>
+    
+    <div class="dialog-body with-ribbon">
+        <div class="dialog-content">
+            <div class="dialog-section">
+                <div class="dialog-section-title">Informasi Materi</div>
+                <div class="form-group">
+                    <label class="modern-label">Judul Materi</label>
+                    <input type="text" class="modern-input" id="judulMateri" placeholder="Contoh: Aljabar Dasar">
+                </div>
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label class="modern-label">Pilih Kelas</label>
+                        <select class="modern-select" id="kelasMateri">
+                            <option value="X IPA 1">X IPA 1</option>
+                            <option value="X IPA 2">X IPA 2</option>
+                            <option value="XI IPA 1">XI IPA 1</option>
+                            <option value="XI Listrik A">XI Listrik A</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label class="modern-label">Kategori Mapel</label>
+                        <select class="modern-select" id="kategoriMateri">
+                            <option value="Matematika">Matematika</option>
+                            <option value="Fisika">Fisika</option>
+                            <option value="Kimia">Kimia</option>
+                            <option value="Biologi">Biologi</option>
+                            <option value="Bahasa Indonesia">Bahasa Indonesia</option>
+                            <option value="Bahasa Inggris">Bahasa Inggris</option>
+                            <option value="Kejuruan">Kejuruan</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="dialog-section">
+                <div class="dialog-section-title">Konten Materi</div>
+                <div class="form-group">
+                    <label class="modern-label">Deskripsi Materi</label>
+                    <textarea class="modern-input" id="deskripsiMateri" rows="4" placeholder="Deskripsi singkat tentang materi..."></textarea>
+                </div>
+                <div class="form-group">
+                    <label class="modern-label">Kompetensi Dasar</label>
+                    <textarea class="modern-input" id="kompetensiMateri" rows="3" placeholder="Kompetensi dasar yang ingin dicapai..."></textarea>
+                </div>
+            </div>
+            
+            <div class="dialog-section">
+                <div class="dialog-section-title">Pengaturan</div>
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label class="modern-label">Tingkat Kesulitan</label>
+                        <select class="modern-select" id="kesulitanMateri">
+                            <option value="Mudah">Mudah</option>
+                            <option value="Sedang">Sedang</option>
+                            <option value="Sulit">Sulit</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label class="modern-label">Estimasi Waktu</label>
+                        <input type="number" class="modern-input" id="waktuMateri" placeholder="0" min="1" max="20">
+                        <small style="color: var(--office-text-light);">JP (Jam Pelajaran)</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="dialog-footer">
+        <div class="dialog-footer-left">
+            <span>Sistem Administrasi Guru • Office 2024 v3.2</span>
+            <span id="materiDialogDate">Loading...</span>
+        </div>
+    </div>
+</div>

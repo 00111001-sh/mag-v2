@@ -1,0 +1,65 @@
+<div class="modern-card">
+    <div class="card-header">
+        <h2>Backup & Restore Database</h2>
+    </div>
+    <div class="card-body">
+        <div class="stats-grid">
+            <div class="stat-card modern">
+                <div class="stat-icon">
+                    <i class="fas fa-database"></i>
+                </div>
+                <div class="stat-content">
+                    <div class="stat-value" id="totalData">1.2 MB</div>
+                    <div class="stat-label">Total Data</div>
+                    <div class="stat-subtitle">Ukuran database</div>
+                </div>
+            </div>
+            <div class="stat-card modern">
+                <div class="stat-icon">
+                    <i class="fas fa-calendar"></i>
+                </div>
+                <div class="stat-content">
+                    <div class="stat-value" id="lastBackup">3 Hari</div>
+                    <div class="stat-label">Backup Terakhir</div>
+                    <div class="stat-subtitle">Yang lalu</div>
+                </div>
+            </div>
+            <div class="stat-card modern">
+                <div class="stat-icon">
+                    <i class="fas fa-file"></i>
+                </div>
+                <div class="stat-content">
+                    <div class="stat-value" id="totalRecords">1,248</div>
+                    <div class="stat-label">Total Records</div>
+                    <div class="stat-subtitle">Data tersimpan</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modern-card">
+            <div class="card-header">
+                <h3>Quick Actions</h3>
+            </div>
+            <div class="card-body">
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px;">
+                    <button class="modern-btn" onclick="backupDatabase()" style="justify-content: center;">
+                        <i class="fas fa-download"></i>
+                        Backup Sekarang
+                    </button>
+                    <button class="modern-btn" onclick="showDialog('restoreDatabaseDialog')" style="justify-content: center;">
+                        <i class="fas fa-upload"></i>
+                        Restore Database
+                    </button>
+                    <button class="modern-btn" onclick="optimizeDatabase()" style="justify-content: center;">
+                        <i class="fas fa-broom"></i>
+                        Optimize Database
+                    </button>
+                    <button class="modern-btn" onclick="showDialog('resetDatabaseDialog')" style="justify-content: center;">
+                        <i class="fas fa-trash"></i>
+                        Reset Database
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

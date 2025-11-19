@@ -1,0 +1,225 @@
+<div class="modern-dialog" id="tambahJurnalDialog" tabindex="-1" data-no-outline="true">
+    <div class="dialog-header">
+        <h3>Tambah Jurnal Mengajar</h3>
+        <button class="dialog-close" onclick="closeDialog('tambahJurnalDialog')" tabindex="-1">
+            <i class="fas fa-times"></i>
+        </button>
+    </div>
+    
+    <!-- Dialog Ribbon -->
+    <div class="dialog-ribbon">
+        <div class="dialog-ribbon-group">
+            <div class="dialog-ribbon-title">Actions</div>
+            <div class="dialog-ribbon-buttons">
+                <button class="dialog-ribbon-btn success" onclick="simpanJurnal()" tabindex="0">
+                    <i class="fas fa-save"></i>
+                    Simpan
+                </button>
+                <button class="dialog-ribbon-btn" onclick="closeDialog('tambahJurnalDialog')" tabindex="0">
+                    <i class="fas fa-times"></i>
+                    Batal
+                </button>
+            </div>
+        </div>
+        <div class="dialog-ribbon-group">
+            <div class="dialog-ribbon-title">Tools</div>
+            <div class="dialog-ribbon-buttons">
+                <button class="dialog-ribbon-btn" onclick="resetFormJurnal()" tabindex="0">
+                    <i class="fas fa-redo"></i>
+                    Reset
+                </button>
+                <button class="dialog-ribbon-btn" onclick="isiJurnalHariIni()" tabindex="0">
+                    <i class="fas fa-calendar-day"></i>
+                    Hari Ini
+                </button>
+            </div>
+        </div>
+        <div class="dialog-ribbon-group">
+            <div class="dialog-ribbon-title">Template</div>
+            <div class="dialog-ribbon-buttons">
+                <button class="dialog-ribbon-btn" onclick="gunakanTemplatePembelajaran()" tabindex="0">
+                    <i class="fas fa-copy"></i>
+                    Template
+                </button>
+            </div>
+        </div>
+    </div>
+    
+    <div class="dialog-body with-ribbon">
+        <div class="dialog-content">
+            <!-- Section Informasi Dasar -->
+            <div class="dialog-section">
+                <div class="dialog-section-title">Informasi Dasar</div>
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label class="modern-label">Tanggal Mengajar *</label>
+                        <input type="date" class="modern-input" id="jurnalTanggal" tabindex="0">
+                    </div>
+                    <div class="form-group">
+                        <label class="modern-label">Pilih Kelas *</label>
+                        <select class="modern-select" id="jurnalKelas" tabindex="0">
+                            <option value="X IPA 1">X IPA 1</option>
+                            <option value="X IPA 2">X IPA 2</option>
+                            <option value="XI IPA 1">XI IPA 1</option>
+                            <option value="XI Listrik A">XI Listrik A</option>
+                            <option value="XI Listrik B">XI Listrik B</option>
+                            <option value="XII Listrik A">XII Listrik A</option>
+                            <option value="XII Listrik B">XII Listrik B</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label class="modern-label">Mata Pelajaran *</label>
+                        <select class="modern-select" id="jurnalMapel" tabindex="0">
+                            <option value="Matematika">Matematika</option>
+                            <option value="Fisika">Fisika</option>
+                            <option value="Kimia">Kimia</option>
+                            <option value="Biologi">Biologi</option>
+                            <option value="Bahasa Indonesia">Bahasa Indonesia</option>
+                            <option value="Bahasa Inggris">Bahasa Inggris</option>
+                            <option value="Kejuruan Listrik">Kejuruan Listrik</option>
+                            <option value="Kejuruan Elektronika">Kejuruan Elektronika</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label class="modern-label">Pilih Materi *</label>
+                        <select class="modern-select" id="jurnalMateri" tabindex="0">
+                            <option value="Aljabar">Aljabar Dasar</option>
+                            <option value="Geometri">Geometri Bangun Ruang</option>
+                            <option value="Trigonometri">Trigonometri</option>
+                            <option value="Listrik Statis">Listrik Statis</option>
+                            <option value="Rangkaian Seri Paralel">Rangkaian Seri Paralel</option>
+                            <option value="Elektronika Dasar">Elektronika Dasar</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section Rencana Pembelajaran -->
+            <div class="dialog-section">
+                <div class="dialog-section-title">Rencana Pembelajaran</div>
+                <div class="form-group">
+                    <label class="modern-label">Topik Pelajaran *</label>
+                    <input type="text" class="modern-input" id="jurnalTopik" placeholder="Masukkan topik pelajaran spesifik" tabindex="0">
+                </div>
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label class="modern-label">Jam Ke</label>
+                        <select class="modern-select" id="jurnalJamKe" tabindex="0">
+                            <option value="1-2">Jam 1-2</option>
+                            <option value="3-4">Jam 3-4</option>
+                            <option value="5-6">Jam 5-6</option>
+                            <option value="7-8">Jam 7-8</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label class="modern-label">Durasi (JP)</label>
+                        <select class="modern-select" id="jurnalDurasi" tabindex="0">
+                            <option value="1">1 JP</option>
+                            <option value="2" selected>2 JP</option>
+                            <option value="3">3 JP</option>
+                            <option value="4">4 JP</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section Proses Pembelajaran -->
+            <div class="dialog-section">
+                <div class="dialog-section-title">Proses Pembelajaran</div>
+                <div class="form-group">
+                    <label class="modern-label">Tujuan Pembelajaran</label>
+                    <textarea class="modern-input" id="jurnalTujuan" rows="2" placeholder="Tujuan pembelajaran yang ingin dicapai..." tabindex="0"></textarea>
+                </div>
+                <div class="form-group">
+                    <label class="modern-label">Aktivitas Pembelajaran</label>
+                    <textarea class="modern-input" id="jurnalAktivitas" rows="3" placeholder="Deskripsi aktivitas pembelajaran yang dilakukan..." tabindex="0"></textarea>
+                </div>
+                <div class="form-group">
+                    <label class="modern-label">Media & Sumber Belajar</label>
+                    <textarea class="modern-input" id="jurnalMedia" rows="2" placeholder="Media dan sumber belajar yang digunakan..." tabindex="0"></textarea>
+                </div>
+            </div>
+
+            <!-- Section Evaluasi & Catatan -->
+            <div class="dialog-section">
+                <div class="dialog-section-title">Evaluasi & Catatan</div>
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label class="modern-label">Penilaian</label>
+                        <select class="modern-select" id="jurnalPenilaian" tabindex="0">
+                            <option value="Formatif">Formatif</option>
+                            <option value="Sumatif">Sumatif</option>
+                            <option value="Observasi">Observasi</option>
+                            <option value="Praktik">Praktik</option>
+                            <option value="Tugas">Tugas</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label class="modern-label">Tingkat Pemahaman</label>
+                        <select class="modern-select" id="jurnalPemahaman" tabindex="0">
+                            <option value="Sangat Baik">Sangat Baik</option>
+                            <option value="Baik">Baik</option>
+                            <option value="Cukup">Cukup</option>
+                            <option value="Perlu Bimbingan">Perlu Bimbingan</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="modern-label">Catatan Khusus & Kendala</label>
+                    <textarea class="modern-input" id="jurnalCatatan" rows="4" placeholder="Catatan khusus, kendala, atau hal penting lainnya..." tabindex="0"></textarea>
+                </div>
+                <div class="form-group">
+                    <label class="modern-label">Tindak Lanjut</label>
+                    <textarea class="modern-input" id="jurnalTindakLanjut" rows="2" placeholder="Rencana tindak lanjut untuk pertemuan berikutnya..." tabindex="0"></textarea>
+                </div>
+            </div>
+
+            <!-- Section Status -->
+            <div class="dialog-section">
+                <div class="dialog-section-title">Status Jurnal</div>
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label class="modern-label">Status</label>
+                        <select class="modern-select" id="jurnalStatus" tabindex="0">
+                            <option value="Draft">Draft</option>
+                            <option value="Selesai">Selesai</option>
+                            <option value="Perlu Review">Perlu Review</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label class="modern-label">Tanda Tangan</label>
+                        <div style="display: flex; align-items: center; gap: 8px; margin-top: 8px;">
+                            <input type="checkbox" id="jurnalTTD" tabindex="0">
+                            <label for="jurnalTTD" style="font-size: 12px; color: var(--office-text-light);">
+                                Tandai sebagai sudah ditandatangani
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Info Required Fields -->
+            <div style="margin-top: 16px; padding: 12px; background: var(--office-gray-light); border-radius: 4px; border-left: 4px solid var(--office-blue);">
+                <small style="color: var(--office-text-light);">
+                    <i class="fas fa-info-circle"></i>
+                    Field dengan tanda <span style="color: var(--office-danger);">*</span> wajib diisi. Jurnal akan tersimpan otomatis sebagai draft.
+                </small>
+            </div>
+        </div>
+    </div>
+    
+    <div class="dialog-footer">
+        <div class="dialog-footer-left">
+            <span>Sistem Administrasi Guru • Office 2024 v3.2</span>
+            <span id="jurnalDialogDate">Loading...</span>
+        </div>
+        <div class="dialog-footer-right">
+            <small style="color: var(--office-text-light);">
+                <i class="fas fa-keyboard"></i>
+                Shortcut: Ctrl+S untuk simpan
+            </small>
+        </div>
+    </div>
+</div>

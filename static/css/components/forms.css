@@ -1,0 +1,187 @@
+/* Form Styles */
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.modern-label {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--office-text-light);
+}
+
+.modern-input, .modern-select {
+    padding: 8px 12px;
+    border: 1px solid var(--office-border);
+    border-radius: 4px;
+    font-size: 13px;
+    background: white;
+    transition: all 0.2s;
+}
+
+.modern-input:focus, .modern-select:focus {
+    outline: none;
+    border-color: var(--office-blue);
+    box-shadow: 0 0 0 2px rgba(43, 87, 154, 0.2);
+}
+
+/* Status Summary Modern */
+.status-summary-modern {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 12px;
+    margin-top: 20px;
+    padding: 16px;
+    background: var(--office-gray-light);
+    border-radius: 8px;
+}
+
+.summary-item-modern {
+    text-align: center;
+    padding: 12px;
+    background: white;
+    border-radius: 6px;
+    box-shadow: var(--office-shadow);
+}
+
+.summary-value-modern {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 4px;
+}
+
+.summary-label-modern {
+    font-size: 11px;
+    color: var(--office-text-light);
+    font-weight: 500;
+}
+
+/* Attendance Status Modern */
+.attendance-status-modern {
+    display: flex;
+    gap: 6px;
+}
+
+.status-option-modern {
+    padding: 6px 10px;
+    border: 1px solid var(--office-border);
+    border-radius: 4px;
+    background: white;
+    cursor: pointer;
+    font-size: 11px;
+    font-weight: 500;
+    transition: all 0.2s;
+    min-width: 60px;
+    text-align: center;
+}
+
+.status-option-modern:hover {
+    background: var(--office-gray-light);
+}
+
+.status-option-modern.selected {
+    background: var(--office-blue);
+    color: white;
+    border-color: var(--office-blue);
+}
+
+/* Empty State Modern */
+.empty-state-modern {
+    text-align: center;
+    padding: 60px 20px;
+    color: var(--office-text-light);
+}
+
+.empty-state-modern .empty-icon {
+    font-size: 48px;
+    margin-bottom: 16px;
+    opacity: 0.5;
+    color: var(--icon-color);
+}
+
+.empty-state-modern .empty-title {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.empty-state-modern .empty-subtitle {
+    font-size: 13px;
+    opacity: 0.8;
+}
+
+/* User Info Modern */
+.user-info-modern {
+    background: white;
+    border-radius: 8px;
+    padding: 20px;
+}
+
+.form-actions {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+}
+
+.settings-grid {
+    display: grid;
+    gap: 20px;
+}
+
+.settings-group {
+    background: white;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: var(--office-shadow);
+}
+
+/* Nilai Input Styles from upadate nilai formatif dan sumatif page */
+.nilai-input-modern {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.nilai-input {
+    width: 80px;
+    padding: 8px 12px;
+    border: 1px solid var(--office-border);
+    border-radius: 4px;
+    font-size: 14px;
+    text-align: center;
+    transition: all 0.2s;
+    background: white;
+}
+
+.nilai-input:focus {
+    outline: none;
+    border-color: var(--office-blue);
+    box-shadow: 0 0 0 2px rgba(0, 120, 215, 0.1);
+}
+
+.nilai-input:hover {
+    border-color: var(--office-blue);
+}
+
+.nilai-suffix {
+    font-size: 12px;
+    color: var(--office-text-light);
+    font-weight: 500;
+}
+
+/* Validation states */
+.nilai-input:invalid {
+    border-color: var(--office-danger);
+    background-color: rgba(220, 53, 69, 0.05);
+}
+
+.nilai-input:valid {
+    border-color: var(--office-success);
+}

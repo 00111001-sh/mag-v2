@@ -1,0 +1,72 @@
+<div class="ribbon-menu">
+    <div class="ribbon-tabs">
+        <div class="ribbon-tab active" data-tab="dashboard" data-tooltip="Beranda">
+            <i class="fas fa-home"></i>
+            <span class="tab-label">Beranda</span>
+        </div>
+        <div class="ribbon-tab" data-tab="absensi" data-tooltip="Absensi">
+            <i class="fas fa-calendar-check"></i>
+            <span class="tab-label">Absensi</span>
+        </div>
+        <div class="ribbon-tab" data-tab="nilaiFormatif" data-tooltip="Nilai Formatif">
+            <i class="fas fa-edit"></i>
+            <span class="tab-label">Formatif</span>
+        </div>
+        <div class="ribbon-tab" data-tab="nilaiSumatif" data-tooltip="Nilai Sumatif">
+            <i class="fas fa-file-alt"></i>
+            <span class="tab-label">Sumatif</span>
+        </div>
+        <div class="ribbon-tab" data-tab="jurnal" data-tooltip="Jurnal">
+            <i class="fas fa-book"></i>
+            <span class="tab-label">Jurnal</span>
+        </div>
+        <div class="ribbon-tab" data-tab="legger" data-tooltip="Legger">
+            <i class="fas fa-table"></i>
+            <span class="tab-label">Legger</span>
+        </div>
+        <div class="ribbon-tab" data-tab="kelas" data-tooltip="Kelas">
+            <i class="fas fa-chalkboard-teacher"></i>
+            <span class="tab-label">Kelas</span>
+        </div>
+        <div class="ribbon-tab" data-tab="siswa" data-tooltip="Siswa">
+            <i class="fas fa-user-graduate"></i>
+            <span class="tab-label">Siswa</span>
+        </div>
+        <div class="ribbon-tab" data-tab="materi" data-tooltip="Materi">
+            <i class="fas fa-book-open"></i>
+            <span class="tab-label">Materi</span>
+        </div>
+        <div class="ribbon-tab" data-tab="semester" data-tooltip="Semester">
+            <i class="fas fa-calendar"></i>
+            <span class="tab-label">Semester</span>
+        </div>
+        <div class="ribbon-tab" data-tab="database" data-tooltip="Database">
+            <i class="fas fa-database"></i>
+            <span class="tab-label">Database</span>
+        </div>
+        <div class="ribbon-tab" data-tab="pengguna" data-tooltip="Pengguna">
+            <i class="fas fa-user-cog"></i>
+            <span class="tab-label">Pengguna</span>
+        </div>
+        <div class="ribbon-tab" data-tab="settings" data-tooltip="Bobot Nilai">
+            <i class="fas fa-cog"></i>
+            <span class="tab-label">Bobot Nilai</span>
+        </div>
+    </div>
+
+    <div class="ribbon-content">
+        {% include 'components/ribbon_panels/dashboard_ribbon.html' %}
+        {% include 'components/ribbon_panels/absensi_ribbon.html' %}
+        {% include 'components/ribbon_panels/nilai_formatif_ribbon.html' %}
+        {% include 'components/ribbon_panels/nilai_sumatif_ribbon.html' %}
+        {% include 'components/ribbon_panels/jurnal_ribbon.html' %}
+        {% include 'components/ribbon_panels/legger_ribbon.html' %}
+        {% include 'components/ribbon_panels/kelas_ribbon.html' %}
+        {% include 'components/ribbon_panels/siswa_ribbon.html' %}
+        {% include 'components/ribbon_panels/materi_ribbon.html' %}
+        {% include 'components/ribbon_panels/semester_ribbon.html' %}
+        {% include 'components/ribbon_panels/database_ribbon.html' %}
+        {% include 'components/ribbon_panels/pengguna_ribbon.html' %}
+        {% include 'components/ribbon_panels/settings_ribbon.html' %}
+    </div>
+</div>

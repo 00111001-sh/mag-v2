@@ -1,0 +1,70 @@
+/* Pastel Theme Classes */
+.theme-pastel-blue {
+    --office-blue: #6A8DE8;
+    --office-blue-dark: #5A7AE0;
+    --office-accent: #6A8DE8;
+    --icon-color: #6A8DE8;
+}
+
+.theme-pastel-green {
+    --office-blue: #5DBE7E;
+    --office-blue-dark: #4DAE6E;
+    --office-accent: #5DBE7E;
+    --icon-color: #5DBE7E;
+}
+
+.theme-pastel-purple {
+    --office-blue: #9D7AD6;
+    --office-blue-dark: #8D6AC6;
+    --office-accent: #9D7AD6;
+    --icon-color: #9D7AD6;
+}
+
+.theme-pastel-pink {
+    --office-blue: #E87CA7;
+    --office-blue-dark: #D86C97;
+    --office-accent: #E87CA7;
+    --icon-color: #E87CA7;
+}
+
+.theme-pastel-orange {
+    --office-blue: #FF9E6D;
+    --office-blue-dark: #EF8E5D;
+    --office-accent: #FF9E6D;
+    --icon-color: #FF9E6D;
+}
+
+.theme-pastel-teal {
+    --office-blue: #4ECDC4;
+    --office-blue-dark: #3EBDB4;
+    --office-accent: #4ECDC4;
+    --icon-color: #4ECDC4;
+}
+
+.theme-pastel-lavender {
+    --office-blue: #B19CD9;
+    --office-blue-dark: #A18CC9;
+    --office-accent: #B19CD9;
+    --icon-color: #B19CD9;
+}
+
+.theme-pastel-mint {
+    --office-blue: #77DD77;
+    --office-blue-dark: #67CD67;
+    --office-accent: #77DD77;
+    --icon-color: #77DD77;
+}
+
+.theme-pastel-coral {
+    --office-blue: #FF6B6B;
+    --office-blue-dark: #EF5B5B;
+    --office-accent: #FF6B6B;
+    --icon-color: #FF6B6B;
+}
+
+.theme-pastel-sky {
+    --office-blue: #87CEEB;
+    --office-blue-dark: #77BEDB;
+    --office-accent: #87CEEB;
+    --icon-color: #87CEEB;
+}

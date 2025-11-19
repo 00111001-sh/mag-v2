@@ -1,0 +1,45 @@
+/* Notification Styles */
+.notification {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: var(--office-shadow-lg);
+    padding: 16px;
+    transform: translateX(400px);
+    transition: transform 0.3s ease;
+    z-index: 10000;
+    border-left: 4px solid var(--office-blue);
+}
+
+.notification.success {
+    border-left-color: var(--office-success);
+}
+
+.notification.error {
+    border-left-color: var(--office-danger);
+}
+
+.notification.show {
+    transform: translateX(0);
+}
+
+.notification-content {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.notification-content i {
+    font-size: 20px;
+    color: var(--icon-color);
+}
+
+.notification.success .notification-content i {
+    color: var(--office-success);
+}
+
+.notification.error .notification-content i {
+    color: var(--office-danger);
+}

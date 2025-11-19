@@ -1,0 +1,78 @@
+<div class="modern-card">
+    <div class="card-header">
+        <h2>Legger Nilai</h2>
+        <div class="card-actions">
+            <button class="action-btn" onclick="app.modules.legger.loadData()" title="Refresh Data">
+                <i class="fas fa-sync-alt"></i>
+            </button>
+        </div>
+    </div>
+    <div class="card-body">
+        <!-- Initial State - Before Data Loaded -->
+        <div id="leggerInitialState" class="initial-state-modern">
+            <div class="initial-icon">
+                <i class="fas fa-table"></i>
+            </div>
+            <div class="initial-title">Legger Nilai</div>
+            <div class="initial-subtitle">
+                Pilih kelas dan semester, lalu klik "Tampilkan" di ribbon untuk memuat data legger nilai
+            </div>
+            <div class="initial-hint">
+                <div class="hint-item">
+                    <i class="fas fa-info-circle"></i>
+                    Legger adalah ringkasan nilai akhir yang menggabungkan semua komponen penilaian
+                </div>
+                <div class="hint-item">
+                    <i class="fas fa-calculator"></i>
+                    Nilai akhir dihitung berdasarkan bobot: Formatif, UTS, UAS, dan Absensi
+                </div>
+                <div class="hint-item">
+                    <i class="fas fa-mouse-pointer"></i>
+                    Klik "Generate Legger" untuk menghitung ulang semua nilai
+                </div>
+            </div>
+        </div>
+
+        <!-- Table Container (Hidden by default) -->
+        <div id="leggerTableContainer" class="table-container" style="display: none;">
+            <table class="modern-table">
+                <thead>
+                    <tr>
+                        <th width="50">No</th>
+                        <th>Nama Siswa</th>
+                        <th width="100">Kelas</th>
+                        <th width="80">Absensi</th>
+                        <th width="100">Nilai Formatif</th>
+                        <th width="80">UTS</th>
+                        <th width="80">UAS</th>
+                        <th width="80">Nilai Akhir</th>
+                        <th width="80">Predikat</th>
+                    </tr>
+                </thead>
+                <tbody id="leggerTable">
+                    <!-- Data akan diisi oleh JavaScript -->
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Summary (Hidden by default) -->
+        <div id="leggerSummary" class="status-summary-modern" style="display: none;">
+            <div class="summary-item-modern">
+                <div class="summary-value-modern" id="totalSiswa">0</div>
+                <div class="summary-label-modern">Jumlah Siswa</div>
+            </div>
+            <div class="summary-item-modern">
+                <div class="summary-value-modern" id="avgNilaiLegger">0</div>
+                <div class="summary-label-modern">Rata-rata Nilai</div>
+            </div>
+            <div class="summary-item-modern">
+                <div class="summary-value-modern" id="nilaiTertinggi">0</div>
+                <div class="summary-label-modern">Nilai Tertinggi</div>
+            </div>
+            <div class="summary-item-modern">
+                <div class="summary-value-modern" id="nilaiTerendah">0</div>
+                <div class="summary-label-modern">Nilai Terendah</div>
+            </div>
+        </div>
+    </div>
+</div>

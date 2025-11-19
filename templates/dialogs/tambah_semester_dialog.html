@@ -1,0 +1,106 @@
+<div class="modern-dialog" id="tambahSemesterDialog">
+    <div class="dialog-header">
+        <h3>Tambah Semester</h3>
+        <button class="dialog-close" onclick="closeDialog('tambahSemesterDialog')">
+            <i class="fas fa-times"></i>
+        </button>
+    </div>
+    
+    <!-- Dialog Ribbon -->
+    <div class="dialog-ribbon">
+        <div class="dialog-ribbon-group">
+            <div class="dialog-ribbon-title">Actions</div>
+            <div class="dialog-ribbon-buttons">
+                <button class="dialog-ribbon-btn success" onclick="tambahSemester()">
+                    <i class="fas fa-save"></i>
+                    Simpan & Aktifkan
+                </button>
+                <button class="dialog-ribbon-btn" onclick="closeDialog('tambahSemesterDialog')">
+                    <i class="fas fa-times"></i>
+                    Batal
+                </button>
+            </div>
+        </div>
+        <div class="dialog-ribbon-group">
+            <div class="dialog-ribbon-title">Tools</div>
+            <div class="dialog-ribbon-buttons">
+                <button class="dialog-ribbon-btn" onclick="resetFormSemester()">
+                    <i class="fas fa-redo"></i>
+                    Reset
+                </button>
+                <button class="dialog-ribbon-btn" onclick="generateTahunAjaran()">
+                    <i class="fas fa-magic"></i>
+                    Auto Fill
+                </button>
+            </div>
+        </div>
+    </div>
+    
+    <div class="dialog-body with-ribbon">
+        <div class="dialog-content">
+            <div class="dialog-section">
+                <div class="dialog-section-title">Informasi Semester</div>
+                <div class="form-group">
+                    <label class="modern-label">Tahun Ajaran</label>
+                    <input type="text" class="modern-input" id="tahunAjaran" placeholder="Contoh: 2023/2024">
+                </div>
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label class="modern-label">Semester</label>
+                        <select class="modern-select" id="semester">
+                            <option value="1">Ganjil</option>
+                            <option value="2">Genap</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label class="modern-label">Status</label>
+                        <select class="modern-select" id="statusSemester">
+                            <option value="Aktif">Aktif</option>
+                            <option value="Nonaktif">Nonaktif</option>
+                            <option value="Rencana">Rencana</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="dialog-section">
+                <div class="dialog-section-title">Periode Akademik</div>
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label class="modern-label">Tanggal Mulai</label>
+                        <input type="date" class="modern-input" id="tanggalMulai">
+                    </div>
+                    <div class="form-group">
+                        <label class="modern-label">Tanggal Selesai</label>
+                        <input type="date" class="modern-input" id="tanggalSelesai">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="modern-label">Durasi</label>
+                    <input type="text" class="modern-input" id="durasiSemester" readonly style="background: var(--office-gray-light);">
+                </div>
+            </div>
+            
+            <div class="dialog-section">
+                <div class="dialog-section-title">Pengaturan</div>
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label class="modern-label">Minimal Kehadiran (%)</label>
+                        <input type="number" class="modern-input" id="minimalKehadiran" min="0" max="100" value="75">
+                    </div>
+                    <div class="form-group">
+                        <label class="modern-label">Nilai KKM</label>
+                        <input type="number" class="modern-input" id="nilaiKKM" min="0" max="100" value="75">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="dialog-footer">
+        <div class="dialog-footer-left">
+            <span>Sistem Administrasi Guru • Office 2024 v3.2</span>
+            <span id="semesterDialogDate">Loading...</span>
+        </div>
+    </div>
+</div>

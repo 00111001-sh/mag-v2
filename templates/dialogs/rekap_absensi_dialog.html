@@ -1,0 +1,102 @@
+<div class="modern-dialog" id="rekapAbsensiDialog">
+    <div class="dialog-header">
+        <h3>Rekap Absensi</h3>
+        <button class="dialog-close" onclick="closeDialog('rekapAbsensiDialog')">
+            <i class="fas fa-times"></i>
+        </button>
+    </div>
+    
+    <!-- Dialog Ribbon -->
+    <div class="dialog-ribbon">
+        <div class="dialog-ribbon-group">
+            <div class="dialog-ribbon-title">Export</div>
+            <div class="dialog-ribbon-buttons">
+                <button class="dialog-ribbon-btn primary" onclick="exportRekapAbsensi()">
+                    <i class="fas fa-file-export"></i>
+                    Export CSV
+                </button>
+                <button class="dialog-ribbon-btn" onclick="closeDialog('rekapAbsensiDialog')">
+                    <i class="fas fa-times"></i>
+                    Batal
+                </button>
+            </div>
+        </div>
+        <div class="dialog-ribbon-group">
+            <div class="dialog-ribbon-title">Actions</div>
+            <div class="dialog-ribbon-buttons">
+                <button class="dialog-ribbon-btn" onclick="generateRekapAbsensi()">
+                    <i class="fas fa-sync"></i>
+                    Generate
+                </button>
+                <button class="dialog-ribbon-btn" onclick="resetFilterRekap()">
+                    <i class="fas fa-redo"></i>
+                    Reset Filter
+                </button>
+            </div>
+        </div>
+    </div>
+    
+    <div class="dialog-body with-ribbon">
+        <div class="dialog-content">
+            <div class="dialog-section">
+                <div class="dialog-section-title">Filter Rekap</div>
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label class="modern-label">Dari Tanggal</label>
+                        <input type="date" class="modern-input" id="rekapDariTanggal">
+                    </div>
+                    <div class="form-group">
+                        <label class="modern-label">Sampai Tanggal</label>
+                        <input type="date" class="modern-input" id="rekapSampaiTanggal">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="dialog-section">
+                <div class="dialog-section-title">Kelas & Status</div>
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label class="modern-label">Kelas</label>
+                        <select class="modern-select" id="rekapKelas">
+                            <option value="all">Semua Kelas</option>
+                            <option value="X IPA 1">X IPA 1</option>
+                            <option value="X IPA 2">X IPA 2</option>
+                            <option value="XI IPA 1">XI IPA 1</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label class="modern-label">Status Kehadiran</label>
+                        <select class="modern-select" id="rekapStatus">
+                            <option value="all">Semua Status</option>
+                            <option value="Hadir">Hadir</option>
+                            <option value="Sakit">Sakit</option>
+                            <option value="Ijin">Ijin</option>
+                            <option value="Tidak Hadir">Tidak Hadir</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="dialog-section">
+                <div class="dialog-section-title">Preview Rekap</div>
+                <div style="background: var(--office-gray-light); padding: 12px; border-radius: 4px; border: 1px solid var(--office-border);">
+                    <div style="display: flex; justify-content: space-between; margin-bottom: 8px;">
+                        <span style="font-size: 12px; color: var(--office-text-light);">Total Records:</span>
+                        <span style="font-size: 12px; font-weight: bold;" id="previewTotalRecords">0</span>
+                    </div>
+                    <div style="display: flex; justify-content: space-between;">
+                        <span style="font-size: 12px; color: var(--office-text-light);">Periode:</span>
+                        <span style="font-size: 12px;" id="previewPeriode">-</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="dialog-footer">
+        <div class="dialog-footer-left">
+            <span>Sistem Administrasi Guru • Office 2024 v3.2</span>
+            <span id="rekapDialogDate">Loading...</span>
+        </div>
+    </div>
+</div>

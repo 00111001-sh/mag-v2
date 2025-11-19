@@ -1,0 +1,58 @@
+<div class="modern-card">
+    <div class="card-header">
+        <h2>Input Nilai Sumatif</h2>
+        <div class="card-actions">
+            <button class="action-btn" onclick="app.modules.nilai.loadDataSumatif()" title="Refresh Data">
+                <i class="fas fa-sync-alt"></i>
+            </button>
+        </div>
+    </div>
+    <div class="card-body">
+        <!-- Initial State - Before Data Loaded -->
+        <div id="sumatifInitialState" class="initial-state-modern">
+            <div class="initial-icon">
+                <i class="fas fa-file-alt"></i>
+            </div>
+            <div class="initial-title">Nilai Sumatif</div>
+            <div class="initial-subtitle">
+                Pilih jenis (UTS/UAS), kelas, dan tanggal, lalu klik "Tampilkan" di ribbon untuk memuat data nilai sumatif
+            </div>
+            <div class="initial-hint">
+                <div class="hint-item">
+                    <i class="fas fa-info-circle"></i>
+                    Nilai sumatif adalah penilaian akhir (UTS/UAS)
+                </div>
+                <div class="hint-item">
+                    <i class="fas fa-mouse-pointer"></i>
+                    Klik tombol "Tampilkan" di panel ribbon atas
+                </div>
+                <div class="hint-item">
+                    <i class="fas fa-keyboard"></i>
+                    Input nilai dengan range 0-100, akan tersimpan otomatis
+                </div>
+            </div>
+        </div>
+
+        <!-- Table Container (Hidden by default) -->
+        <div id="sumatifTableContainer" class="table-container" style="display: none;">
+            <table class="modern-table">
+                <thead>
+                    <tr>
+                        <th width="50">No</th>
+                        <th>Nama Siswa</th>
+                        <th width="100">Kelas</th>
+                        <th width="150" id="headerNilaiSumatif">Nilai UTS</th>
+                    </tr>
+                </thead>
+                <tbody id="nilaiSumatifTable">
+                    <!-- Data akan diisi oleh JavaScript -->
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Summary (Hidden by default) -->
+        <div id="summaryNilaiSumatif" class="status-summary-modern" style="display: none;">
+            <!-- Summary akan diisi oleh JavaScript -->
+        </div>
+    </div>
+</div>

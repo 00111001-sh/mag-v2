@@ -1,0 +1,36 @@
+<div class="ribbon-panel" data-tab="database">
+    <div class="ribbon-group">
+        <div class="ribbon-title">Backup & Restore</div>
+        <div class="ribbon-buttons">
+            <button class="ribbon-btn" onclick="backupDatabase()">
+                <i class="fas fa-download"></i>
+                <span>Backup</span>
+            </button>
+            <button class="ribbon-btn" onclick="showDialog('restoreDatabaseDialog')">
+                <i class="fas fa-upload"></i>
+                <span>Restore</span>
+            </button>
+        </div>
+    </div>
+    <div class="ribbon-group">
+        <div class="ribbon-title">Maintenance</div>
+        <div class="ribbon-buttons">
+            <button class="ribbon-btn" onclick="optimizeDatabase()">
+                <i class="fas fa-broom"></i>
+                <span>Optimize</span>
+            </button>
+            <button class="ribbon-btn" onclick="showDialog('resetDatabaseDialog')">
+                <i class="fas fa-trash"></i>
+                <span>Reset</span>
+            </button>
+        </div>
+    </div>
+    <div class="ribbon-group">
+        <div class="ribbon-title">Info</div>
+        <div style="font-size: 11px; color: var(--office-text-light); line-height: 1.4;">
+            <div>Total Data: <strong id="ribbonTotalData">1.2 MB</strong></div>
+            <div>Records: <strong id="ribbonTotalRecords">1,248</strong></div>
+            <div>Backup: <strong id="ribbonLastBackup">3 hari lalu</strong></div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,312 @@
+/* Dark Theme - Comprehensive Dark Mode */
+.theme-dark {
+    /* Main Colors */
+    --office-blue: #4A76CF;
+    --office-blue-dark: #3A66BF;
+    --office-blue-light: #5A86DF;
+    --office-gray-light: #1E1E1E;
+    --office-gray-medium: #2D2D2D;
+    --office-gray-dark: #3D3D3D;
+    --office-text: #FFFFFF;
+    --office-text-light: #A0A0A0;
+    --office-border: #404040;
+    --office-accent: #4A76CF;
+    --office-success: #107C10;
+    --office-warning: #D83B01;
+    --office-danger: #E81123;
+    
+    /* Theme Colors */
+    --theme-blue: #4A76CF;
+    --theme-green: #107C10;
+    --theme-purple: #7B64C8;
+    --theme-red: #D83B01;
+    --theme-dark: #323130;
+    
+    /* Pastel Colors - Adjusted for Dark Mode */
+    --theme-pastel-blue: #6A8DE8;
+    --theme-pastel-green: #5DBE7E;
+    --theme-pastel-purple: #9D7AD6;
+    --theme-pastel-pink: #E87CA7;
+    --theme-pastel-orange: #FF9E6D;
+    --theme-pastel-teal: #4ECDC4;
+    --theme-pastel-lavender: #B19CD9;
+    --theme-pastel-mint: #77DD77;
+    --theme-pastel-coral: #FF6B6B;
+    --theme-pastel-sky: #87CEEB;
+    
+    /* Icon Color */
+    --icon-color: #4A76CF;
+    
+    /* Shadows - Adjusted for Dark Mode */
+    --office-shadow: 0 1.6px 3.6px 0 rgba(0,0,0,0.4), 0 0.3px 0.9px 0 rgba(0,0,0,0.3);
+    --office-shadow-lg: 0 6.4px 14.4px 0 rgba(0,0,0,0.5), 0 1.2px 3.6px 0 rgba(0,0,0,0.4);
+}
+
+/* Dark Theme Body Background */
+body.theme-dark {
+    background: linear-gradient(135deg, #2D2D2D 0%, #1E1E1E 100%);
+}
+
+/* Dark Theme Specific Overrides */
+.theme-dark .office-container {
+    background: #2D2D2D;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+}
+
+.theme-dark .ribbon-menu {
+    background: #2D2D2D;
+    border-bottom-color: var(--office-border);
+}
+
+.theme-dark .ribbon-tabs {
+    background: #252525;
+    border-bottom-color: var(--office-border);
+}
+
+.theme-dark .ribbon-content {
+    background: #2D2D2D;
+    border-top-color: var(--office-border);
+}
+
+.theme-dark .main-content {
+    background: #1E1E1E;
+}
+
+.theme-dark .modern-card,
+.theme-dark .table-container,
+.theme-dark .stat-card.modern,
+.theme-dark .settings-group,
+.theme-dark .user-info-modern,
+.theme-dark .summary-item-modern,
+.theme-dark .dialog-content {
+    background: #2D2D2D;
+    box-shadow: var(--office-shadow);
+}
+
+.theme-dark .modern-table th {
+    background: #252525;
+    border-bottom-color: var(--office-border);
+}
+
+.theme-dark .modern-table td {
+    background: #2D2D2D;
+    border-bottom-color: var(--office-border);
+}
+
+.theme-dark .modern-table tr:hover td {
+    background: #353535;
+}
+
+.theme-dark .status-bar {
+    background: #252525;
+    border-top-color: var(--office-border);
+}
+
+.theme-dark .modern-dialog {
+    background: #2D2D2D;
+    border-color: var(--office-border);
+}
+
+.theme-dark .dialog-body {
+    background: #1E1E1E;
+}
+
+.theme-dark .dialog-footer {
+    background: #252525;
+    border-top-color: var(--office-border);
+}
+
+.theme-dark .dialog-ribbon {
+    background: #2D2D2D;
+    border-bottom-color: var(--office-border);
+}
+
+/* Form Elements in Dark Theme */
+.theme-dark .modern-input,
+.theme-dark .modern-select,
+.theme-dark .ribbon-select,
+.theme-dark .ribbon-input {
+    background: #353535;
+    border-color: var(--office-border);
+    color: var(--office-text);
+}
+
+.theme-dark .modern-input:focus,
+.theme-dark .modern-select:focus,
+.theme-dark .ribbon-select:focus,
+.theme-dark .ribbon-input:focus {
+    border-color: var(--office-blue);
+    box-shadow: 0 0 0 2px rgba(74, 118, 207, 0.3);
+}
+
+.theme-dark .modern-input::placeholder,
+.theme-dark .modern-select::placeholder {
+    color: var(--office-text-light);
+}
+
+/* Buttons in Dark Theme */
+.theme-dark .ribbon-btn:not(.primary):not(.success):not(.warning):not(.danger),
+.theme-dark .modern-btn:not(.primary):not(.success):not(.warning):not(.danger),
+.theme-dark .dialog-action-btn:not(.primary):not(.success):not(.warning):not(.danger),
+.theme-dark .dialog-ribbon-btn:not(.primary):not(.success):not(.warning):not(.danger) {
+    background: #353535;
+    border-color: var(--office-border);
+    color: var(--office-text);
+}
+
+.theme-dark .ribbon-btn:hover:not(.primary):not(.success):not(.warning):not(.danger),
+.theme-dark .modern-btn:hover:not(.primary):not(.success):not(.warning):not(.danger),
+.theme-dark .dialog-action-btn:hover:not(.primary):not(.success):not(.warning):not(.danger),
+.theme-dark .dialog-ribbon-btn:hover:not(.primary):not(.success):not(.warning):not(.danger) {
+    background: #404040;
+    border-color: var(--office-gray-dark);
+}
+
+/* Status Summary in Dark Theme */
+.theme-dark .status-summary-modern {
+    background: #252525;
+}
+
+.theme-dark .summary-item-modern {
+    background: #2D2D2D;
+}
+
+/* Attendance Status in Dark Theme */
+.theme-dark .status-option-modern {
+    background: #353535;
+    border-color: var(--office-border);
+    color: var(--office-text);
+}
+
+.theme-dark .status-option-modern:hover {
+    background: #404040;
+}
+
+.theme-dark .status-option-modern.selected {
+    background: var(--office-blue);
+    color: white;
+    border-color: var(--office-blue);
+}
+
+/* Empty State in Dark Theme */
+.theme-dark .empty-state-modern {
+    color: var(--office-text-light);
+}
+
+.theme-dark .empty-state-modern .empty-icon {
+    color: var(--icon-color);
+}
+
+/* Theme Selector in Dark Theme */
+.theme-dark .theme-card {
+    background: #2D2D2D;
+    border-color: var(--office-border);
+}
+
+.theme-dark .theme-card:hover {
+    border-color: var(--office-blue);
+}
+
+.theme-dark .theme-card.selected {
+    background: #353535;
+    border-color: var(--office-blue);
+}
+
+.theme-dark .current-theme-info {
+    background: #252525;
+    border-color: var(--office-border);
+}
+
+.theme-dark .theme-sample {
+    border-color: var(--office-border);
+}
+
+/* Notification in Dark Theme */
+.theme-dark .notification {
+    background: #2D2D2D;
+    color: var(--office-text);
+}
+
+/* Action Buttons in Dark Theme */
+.theme-dark .action-btn {
+    color: var(--icon-color);
+}
+
+.theme-dark .action-btn:hover {
+    background: #353535;
+}
+
+.theme-dark .action-icon-btn {
+    background: #353535;
+    border-color: var(--office-border);
+    color: var(--icon-color);
+}
+
+.theme-dark .action-icon-btn:hover {
+    background: #404040;
+}
+
+/* Scrollbar in Dark Theme */
+.theme-dark ::-webkit-scrollbar-track {
+    background: #252525;
+}
+
+.theme-dark ::-webkit-scrollbar-thumb {
+    background: #404040;
+}
+
+.theme-dark ::-webkit-scrollbar-thumb:hover {
+    background: #4A4A4A;
+}
+
+/* Dialog specific dark theme styles */
+.theme-dark .dialog-header {
+    background: var(--office-blue);
+    border-bottom-color: var(--office-blue-dark);
+}
+
+.theme-dark .dialog-close {
+    background: rgba(255,255,255,0.1);
+    color: white;
+}
+
+.theme-dark .dialog-close:hover {
+    background: rgba(255,255,255,0.2);
+}
+
+/* Card headers in dark theme */
+.theme-dark .card-header {
+    border-bottom-color: var(--office-border);
+}
+
+/* Status items in dark theme */
+.theme-dark .online-status {
+    color: #107C10;
+}
+
+.theme-dark .online-status.offline {
+    color: #E81123;
+}
+
+/* Text colors in dark theme */
+.theme-dark .ribbon-title,
+.theme-dark .dialog-ribbon-title,
+.theme-dark .dialog-section-title,
+.theme-dark .modern-label,
+.theme-dark .detail-label,
+.theme-dark .summary-label-modern,
+.theme-dark .stat-label,
+.theme-dark .filter-item label {
+    color: var(--office-text-light);
+}
+
+.theme-dark .stat-value,
+.theme-dark .detail-value,
+.theme-dark .summary-value-modern,
+.theme-dark .student-name {
+    color: var(--office-text);
+}
+
+.theme-dark .student-nisn {
+    color: var(--office-text-light);
+}

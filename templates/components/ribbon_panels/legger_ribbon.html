@@ -1,0 +1,50 @@
+<div class="ribbon-panel" data-tab="legger">
+    <div class="ribbon-group">
+        <div class="ribbon-title">Filter</div>
+        <div class="ribbon-filters">
+            <div class="filter-item">
+                <label>Kelas</label>
+                <select class="ribbon-select" id="filterKelasLegger">
+                    <option value="X IPA 1">X IPA 1</option>
+                    <option value="X IPA 2">X IPA 2</option>
+                    <option value="XI IPA 1">XI IPA 1</option>
+                    <option value="XI Listrik A">XI Listrik A</option>
+                    <option value="XI Listrik B">XI Listrik B</option>
+                </select>
+            </div>
+            <div class="filter-item">
+                <label>Semester</label>
+                <select class="ribbon-select" id="filterSemesterLegger">
+                    <!-- Options will be populated by JavaScript -->
+                    <option value="">Loading...</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    <div class="ribbon-group">
+        <div class="ribbon-title">Aksi</div>
+        <div class="ribbon-buttons">
+            <button class="ribbon-btn" onclick="loadLegger()">
+                <i class="fas fa-sync"></i>
+                <span>Tampilkan</span>
+            </button>
+            <button class="ribbon-btn" onclick="generateLegger()">
+                <i class="fas fa-calculator"></i>
+                <span>Generate</span>
+            </button>
+            <button class="ribbon-btn" onclick="exportLegger()">
+                <i class="fas fa-file-export"></i>
+                <span>Export</span>
+            </button>
+        </div>
+    </div>
+    <div class="ribbon-group">
+        <div class="ribbon-title">Bobot Nilai</div>
+        <div style="font-size: 11px; color: var(--office-text-light); line-height: 1.4;">
+            <div>Formatif: <strong id="ribbonBobotFormatif">25%</strong></div>
+            <div>UTS: <strong id="ribbonBobotUTS">25%</strong></div>
+            <div>UAS: <strong id="ribbonBobotUAS">30%</strong></div>
+            <div>Absensi: <strong id="ribbonBobotAbsensi">20%</strong></div>
+        </div>
+    </div>
+</div>

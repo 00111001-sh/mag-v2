@@ -1,0 +1,337 @@
+/* Modern Table */
+.table-container {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: var(--office-shadow);
+}
+
+.modern-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+}
+
+.modern-table th {
+    background: var(--office-gray-light);
+    padding: 12px 16px;
+    text-align: left;
+    font-weight: 600;
+    color: var(--office-text);
+    border-bottom: 1px solid var(--office-border);
+}
+
+.modern-table td {
+    padding: 12px 16px;
+    border-bottom: 1px solid var(--office-border);
+    background: white;
+}
+
+.modern-table tr:hover td {
+    background: var(--office-gray-light);
+}
+
+.modern-table td:last-child {
+    padding: 8px 16px;
+}
+
+/* Action buttons dengan icon saja */
+.action-buttons {
+    display: flex;
+    gap: 4px;
+    justify-content: center;
+}
+
+.action-icon-btn {
+    width: 32px;
+    height: 32px;
+    border: 1px solid var(--office-border);
+    border-radius: 4px;
+    background: white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--icon-color);
+    font-size: 12px;
+    transition: all 0.2s;
+}
+
+.action-icon-btn:hover {
+    background: var(--office-gray-light);
+}
+
+.action-icon-btn.primary {
+    background: var(--office-blue);
+    color: white;
+    border-color: var(--office-blue);
+}
+
+.action-icon-btn.danger {
+    background: var(--office-danger);
+    color: white;
+    border-color: var(--office-danger);
+}
+
+.action-icon-btn.success {
+    background: var(--office-success);
+    color: white;
+    border-color: var(--office-success);
+}
+
+/* Styling untuk NISN di tabel absensi */
+.student-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.student-name {
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.student-nisn {
+    font-size: 11px;
+    color: var(--office-text-light);
+    font-weight: 300;
+    margin-top: 2px;
+}
+
+
+/* Initial State Styles */
+.initial-state-modern {
+    text-align: center;
+    padding: 60px 40px;
+    color: var(--office-text-light);
+    background: var(--office-gray-light);
+    border-radius: 8px;
+    border: 2px dashed var(--office-border);
+}
+
+.initial-icon {
+    font-size: 64px;
+    color: var(--office-blue);
+    margin-bottom: 20px;
+    opacity: 0.7;
+}
+
+.initial-title {
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--office-text);
+    margin-bottom: 12px;
+}
+
+.initial-subtitle {
+    font-size: 16px;
+    margin-bottom: 30px;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.5;
+}
+
+.initial-hint {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    border-left: 4px solid var(--office-blue);
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.hint-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+.hint-item:last-child {
+    margin-bottom: 0;
+}
+
+.hint-item i {
+    color: var(--office-blue);
+    width: 16px;
+}
+
+/* Empty State Styles */
+.empty-state-modern {
+    text-align: center;
+    padding: 40px 20px;
+    color: var(--office-text-light);
+}
+
+.empty-icon {
+    font-size: 48px;
+    margin-bottom: 16px;
+    opacity: 0.5;
+}
+
+.empty-title {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: var(--office-text);
+}
+
+.empty-subtitle {
+    font-size: 14px;
+    opacity: 0.7;
+}
+
+/* Jurnal Specific Styles from update jurnal */
+.materi-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.materi-judul {
+    font-weight: 600;
+    color: var(--office-text);
+    margin-bottom: 2px;
+}
+
+.materi-mapel {
+    font-size: 11px;
+    color: var(--office-text-light);
+}
+
+.topik-truncate,
+.catatan-truncate {
+    max-width: 200px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.catatan-truncate {
+    color: var(--office-text-light);
+    font-style: italic;
+}
+
+/* Action Buttons */
+.action-buttons-modern {
+    display: flex;
+    gap: 4px;
+    justify-content: center;
+}
+
+.action-btn-small {
+    padding: 6px 8px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 12px;
+    transition: all 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+}
+
+.action-btn-small.primary {
+    background: var(--office-blue);
+    color: white;
+}
+
+.action-btn-small.primary:hover {
+    background: var(--office-blue-dark);
+}
+
+.action-btn-small.success {
+    background: var(--office-success);
+    color: white;
+}
+
+.action-btn-small.success:hover {
+    background: var(--office-success-dark);
+}
+
+.action-btn-small.warning {
+    background: var(--office-warning);
+    color: white;
+}
+
+.action-btn-small.warning:hover {
+    background: var(--office-warning-dark);
+}
+
+.action-btn-small.danger {
+    background: var(--office-danger);
+    color: white;
+}
+
+.action-btn-small.danger:hover {
+    background: var(--office-danger-dark);
+}
+
+/* Jurnal Form Styles */
+.dialog-section {
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--office-border);
+}
+
+.dialog-section:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+.dialog-section-title {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--office-text);
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.dialog-section-title::before {
+    content: '';
+    width: 4px;
+    height: 16px;
+    background: var(--office-blue);
+    border-radius: 2px;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+@media (max-width: 768px) {
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Status Badges */
+.status-badge {
+    display: inline-block;
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.status-badge.draft {
+    background: var(--office-warning-light);
+    color: var(--office-warning-dark);
+}
+
+.status-badge.selesai {
+    background: var(--office-success-light);
+    color: var(--office-success-dark);
+}
+
+.status-badge.review {
+    background: var(--office-blue-light);
+    color: var(--office-blue-dark);
+}

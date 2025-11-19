@@ -1,0 +1,252 @@
+/* Main Content */
+.main-content {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+    background: var(--office-gray-light);
+    position: relative;
+    min-height: auto;
+}
+
+.content-area {
+    display: none;
+}
+
+.content-area.active {
+    display: block;
+}
+
+/* Legger Specific Styles from update legger*/
+.percentage-badge,
+.nilai-badge,
+.nilai-akhir-badge,
+.predikat-badge {
+    display: inline-block;
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-size: 11px;
+    font-weight: 600;
+    text-align: center;
+    min-width: 50px;
+}
+
+/* Percentage Badge Styles */
+.percentage-badge.excellent {
+    background: var(--office-success-light);
+    color: var(--office-success-dark);
+    border: 1px solid var(--office-success);
+}
+
+.percentage-badge.good {
+    background: var(--office-blue-light);
+    color: var(--office-blue-dark);
+    border: 1px solid var(--office-blue);
+}
+
+.percentage-badge.fair {
+    background: var(--office-warning-light);
+    color: var(--office-warning-dark);
+    border: 1px solid var(--office-warning);
+}
+
+.percentage-badge.poor {
+    background: var(--office-danger-light);
+    color: var(--office-danger-dark);
+    border: 1px solid var(--office-danger);
+}
+
+/* Nilai Badge Styles */
+.nilai-badge.excellent {
+    background: linear-gradient(135deg, var(--office-success-light), #d4edda);
+    color: var(--office-success-dark);
+    border: 1px solid var(--office-success);
+    font-weight: bold;
+}
+
+.nilai-badge.good {
+    background: linear-gradient(135deg, var(--office-blue-light), #d1ecf1);
+    color: var(--office-blue-dark);
+    border: 1px solid var(--office-blue);
+    font-weight: bold;
+}
+
+.nilai-badge.fair {
+    background: linear-gradient(135deg, var(--office-warning-light), #fff3cd);
+    color: var(--office-warning-dark);
+    border: 1px solid var(--office-warning);
+    font-weight: bold;
+}
+
+.nilai-badge.poor {
+    background: linear-gradient(135deg, var(--office-danger-light), #f8d7da);
+    color: var(--office-danger-dark);
+    border: 1px solid var(--office-danger);
+    font-weight: bold;
+}
+
+/* Nilai Akhir Badge - More prominent */
+.nilai-akhir-badge {
+    font-size: 12px;
+    font-weight: 700;
+    padding: 6px 10px;
+    min-width: 60px;
+}
+
+.nilai-akhir-badge.excellent {
+    background: linear-gradient(135deg, #28a745, #20c997);
+    color: white;
+    border: 2px solid #28a745;
+    box-shadow: 0 2px 4px rgba(40, 167, 69, 0.3);
+}
+
+.nilai-akhir-badge.good {
+    background: linear-gradient(135deg, #007bff, #17a2b8);
+    color: white;
+    border: 2px solid #007bff;
+    box-shadow: 0 2px 4px rgba(0, 123, 255, 0.3);
+}
+
+.nilai-akhir-badge.fair {
+    background: linear-gradient(135deg, #ffc107, #fd7e14);
+    color: white;
+    border: 2px solid #ffc107;
+    box-shadow: 0 2px 4px rgba(255, 193, 7, 0.3);
+}
+
+.nilai-akhir-badge.poor {
+    background: linear-gradient(135deg, #dc3545, #e83e8c);
+    color: white;
+    border: 2px solid #dc3545;
+    box-shadow: 0 2px 4px rgba(220, 53, 69, 0.3);
+}
+
+/* Predikat Badge Styles */
+.predikat-badge {
+    font-size: 12px;
+    font-weight: 800;
+    padding: 6px 12px;
+    min-width: 40px;
+    text-transform: uppercase;
+}
+
+.predikat-badge.excellent {
+    background: linear-gradient(135deg, #28a745, #20c997);
+    color: white;
+    border: 2px solid #28a745;
+    box-shadow: 0 2px 6px rgba(40, 167, 69, 0.4);
+}
+
+.predikat-badge.good {
+    background: linear-gradient(135deg, #007bff, #17a2b8);
+    color: white;
+    border: 2px solid #007bff;
+    box-shadow: 0 2px 6px rgba(0, 123, 255, 0.4);
+}
+
+.predikat-badge.fair {
+    background: linear-gradient(135deg, #ffc107, #fd7e14);
+    color: white;
+    border: 2px solid #ffc107;
+    box-shadow: 0 2px 6px rgba(255, 193, 7, 0.4);
+}
+
+.predikat-badge.poor {
+    background: linear-gradient(135deg, #dc3545, #e83e8c);
+    color: white;
+    border: 2px solid #dc3545;
+    box-shadow: 0 2px 6px rgba(220, 53, 69, 0.4);
+}
+
+/* Text alignment for table cells */
+.text-center {
+    text-align: center;
+}
+
+.text-right {
+    text-align: right;
+}
+
+/* Legger Table Specific Styles */
+.legger-table .modern-table th {
+    text-align: center;
+}
+
+.legger-table .modern-table td:nth-child(4),
+.legger-table .modern-table td:nth-child(5),
+.legger-table .modern-table td:nth-child(6),
+.legger-table .modern-table td:nth-child(7),
+.legger-table .modern-table td:nth-child(8),
+.legger-table .modern-table td:nth-child(9) {
+    text-align: center;
+}
+
+/* Responsive Design for Legger */
+@media (max-width: 1024px) {
+    .legger-table .modern-table {
+        font-size: 12px;
+    }
+    
+    .percentage-badge,
+    .nilai-badge,
+    .predikat-badge {
+        font-size: 10px;
+        padding: 3px 6px;
+        min-width: 40px;
+    }
+    
+    .nilai-akhir-badge {
+        font-size: 11px;
+        padding: 4px 8px;
+        min-width: 50px;
+    }
+}
+
+@media (max-width: 768px) {
+    .legger-table .table-container {
+        overflow-x: auto;
+    }
+    
+    .legger-table .modern-table {
+        min-width: 800px;
+    }
+}
+
+/* Color scale legend */
+.legger-legend {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    margin-top: 16px;
+    padding: 12px;
+    background: var(--office-gray-light);
+    border-radius: 8px;
+    font-size: 11px;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.legend-color {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+
+.legend-color.excellent {
+    background: var(--office-success);
+}
+
+.legend-color.good {
+    background: var(--office-blue);
+}
+
+.legend-color.fair {
+    background: var(--office-warning);
+}
+
+.legend-color.poor {
+    background: var(--office-danger);
+}

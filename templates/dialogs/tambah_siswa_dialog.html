@@ -1,0 +1,114 @@
+<div class="modern-dialog" id="tambahSiswaDialog">
+    <div class="dialog-header">
+        <h3>Tambah Siswa</h3>
+        <button class="dialog-close" onclick="closeDialog('tambahSiswaDialog')">
+            <i class="fas fa-times"></i>
+        </button>
+    </div>
+    
+    <!-- Dialog Ribbon -->
+    <div class="dialog-ribbon">
+        <div class="dialog-ribbon-group">
+            <div class="dialog-ribbon-title">Actions</div>
+            <div class="dialog-ribbon-buttons">
+                <button class="dialog-ribbon-btn success" onclick="tambahSiswa()">
+                    <i class="fas fa-save"></i>
+                    Simpan
+                </button>
+                <button class="dialog-ribbon-btn" onclick="closeDialog('tambahSiswaDialog')">
+                    <i class="fas fa-times"></i>
+                    Batal
+                </button>
+            </div>
+        </div>
+        <div class="dialog-ribbon-group">
+            <div class="dialog-ribbon-title">Tools</div>
+            <div class="dialog-ribbon-buttons">
+                <button class="dialog-ribbon-btn" onclick="resetFormSiswa()">
+                    <i class="fas fa-redo"></i>
+                    Reset
+                </button>
+                <button class="dialog-ribbon-btn" onclick="generateNISN()">
+                    <i class="fas fa-bolt"></i>
+                    Generate NISN
+                </button>
+            </div>
+        </div>
+    </div>
+    
+    <div class="dialog-body with-ribbon">
+        <div class="dialog-content">
+            <div class="dialog-section">
+                <div class="dialog-section-title">Data Pribadi</div>
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label class="modern-label">NISN</label>
+                        <input type="text" class="modern-input" id="nisnSiswa" placeholder="Nomor Induk Siswa Nasional">
+                    </div>
+                    <div class="form-group">
+                        <label class="modern-label">Nama Lengkap</label>
+                        <input type="text" class="modern-input" id="namaSiswa" placeholder="Nama lengkap siswa">
+                    </div>
+                </div>
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label class="modern-label">Tempat Lahir</label>
+                        <input type="text" class="modern-input" id="tempatLahirSiswa" placeholder="Tempat lahir">
+                    </div>
+                    <div class="form-group">
+                        <label class="modern-label">Tanggal Lahir</label>
+                        <input type="date" class="modern-input" id="tanggalLahirSiswa">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="dialog-section">
+                <div class="dialog-section-title">Data Akademik</div>
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label class="modern-label">Pilih Kelas</label>
+                        <select class="modern-select" id="kelasSiswa">
+                            <option value="X IPA 1">X IPA 1</option>
+                            <option value="X IPA 2">X IPA 2</option>
+                            <option value="XI IPA 1">XI IPA 1</option>
+                            <option value="XI Listrik A">XI Listrik A</option>
+                            <option value="XI Listrik B">XI Listrik B</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label class="modern-label">Jenis Kelamin</label>
+                        <select class="modern-select" id="jenisKelaminSiswa">
+                            <option value="L">Laki-laki</option>
+                            <option value="P">Perempuan</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="dialog-section">
+                <div class="dialog-section-title">Kontak</div>
+                <div class="form-group">
+                    <label class="modern-label">Alamat</label>
+                    <textarea class="modern-input" id="alamatSiswa" rows="3" placeholder="Alamat lengkap"></textarea>
+                </div>
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label class="modern-label">No. Telepon</label>
+                        <input type="text" class="modern-input" id="teleponSiswa" placeholder="Nomor telepon">
+                    </div>
+                    <div class="form-group">
+                        <label class="modern-label">Email</label>
+                        <input type="email" class="modern-input" id="emailSiswa" placeholder="Alamat email">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="dialog-footer">
+        <div class="dialog-footer-left">
+            <span>Sistem Administrasi Guru • Office 2024 v3.2</span>
+            <span id="siswaDialogDate">Loading...</span>
+        </div>
+    </div>
+</div>

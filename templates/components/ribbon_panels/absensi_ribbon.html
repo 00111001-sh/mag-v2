@@ -1,0 +1,44 @@
+<div class="ribbon-panel" data-tab="absensi">
+    <div class="ribbon-group">
+        <div class="ribbon-title">Filter</div>
+        <div class="ribbon-filters">
+            <div class="filter-item">
+                <label>Kelas</label>
+                <select class="ribbon-select" id="filterKelasAbsensi">
+                    <option value="X IPA 1">X IPA 1</option>
+                    <option value="X IPA 2">X IPA 2</option>
+                    <option value="XI IPA 1">XI IPA 1</option>
+                </select>
+            </div>
+            <div class="filter-item">
+                <label>Tanggal</label>
+                <input type="date" class="ribbon-input" id="tanggalAbsensi" value="{{ today }}">
+            </div>
+        </div>
+    </div>
+    <div class="ribbon-group">
+        <div class="ribbon-title">Aksi</div>
+        <div class="ribbon-buttons">
+            <button class="ribbon-btn" onclick="loadAbsensi()">
+                <i class="fas fa-sync"></i>
+                <span>Tampilkan</span>
+            </button>
+            <button class="ribbon-btn" onclick="showDialog('rekapAbsensiDialog')">
+                <i class="fas fa-chart-pie"></i>
+                <span>Rekap</span>
+            </button>
+            <button class="ribbon-btn" onclick="resetAbsensi()">
+                <i class="fas fa-redo"></i>
+                <span>Reset</span>
+            </button>
+        </div>
+    </div>
+    <div class="ribbon-group">
+        <div class="ribbon-title">Statistik</div>
+        <div style="font-size: 11px; color: var(--office-text-light); line-height: 1.4;">
+            <div>Sakit: <strong id="ribbonTotalSakit">0</strong></div>
+            <div>Ijin: <strong id="ribbonTotalIjin">0</strong></div>
+            <div>Alpa: <strong id="ribbonTotalAlpa">0</strong></div>
+        </div>
+    </div>    
+</div>

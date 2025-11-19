@@ -1,0 +1,54 @@
+<div class="modern-card">
+    <div class="card-header">
+        <h2>Absensi Siswa</h2>
+        <div class="card-actions">
+            <button class="action-btn" onclick="app.modules.absensi.loadData()" title="Refresh Data">
+                <i class="fas fa-sync-alt"></i>
+            </button>
+        </div>
+    </div>
+    <div class="card-body">
+        <!-- Initial State - Before Data Loaded -->
+        <div id="absensiInitialState" class="initial-state-modern">
+            <div class="initial-icon">
+                <i class="fas fa-calendar-check"></i>
+            </div>
+            <div class="initial-title">Absensi Siswa</div>
+            <div class="initial-subtitle">
+                Pilih kelas dan tanggal, lalu klik "Tampilkan" di ribbon untuk memuat data absensi
+            </div>
+            <div class="initial-hint">
+                <div class="hint-item">
+                    <i class="fas fa-info-circle"></i>
+                    Pastikan kelas dan tanggal sudah dipilih
+                </div>
+                <div class="hint-item">
+                    <i class="fas fa-mouse-pointer"></i>
+                    Klik tombol "Tampilkan" di panel ribbon atas
+                </div>
+            </div>
+        </div>
+
+        <!-- Table Container (Hidden by default) -->
+        <div id="absensiTableContainer" class="table-container" style="display: none;">
+            <table class="modern-table">
+                <thead>
+                    <tr>
+                        <th width="50">No</th>
+                        <th>Nama Siswa</th>
+                        <th width="100">Kelas</th>
+                        <th width="200">Status Kehadiran</th>
+                    </tr>
+                </thead>
+                <tbody id="absensiTable">
+                    <!-- Data akan diisi oleh JavaScript -->
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Summary (Hidden by default) -->
+        <div id="summaryAbsensi" class="status-summary-modern" style="display: none;">
+            <!-- Summary akan diisi oleh JavaScript -->
+        </div>
+    </div>
+</div>

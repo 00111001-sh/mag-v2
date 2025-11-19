@@ -1,0 +1,62 @@
+<div class="modern-dialog" id="restoreDatabaseDialog">
+    <div class="dialog-header">
+        <h3>Restore Database</h3>
+        <button class="dialog-close" onclick="closeDialog('restoreDatabaseDialog')">
+            <i class="fas fa-times"></i>
+        </button>
+    </div>
+    
+    <!-- Dialog Ribbon -->
+    <div class="dialog-ribbon">
+        <div class="dialog-ribbon-group">
+            <div class="dialog-ribbon-title">Actions</div>
+            <div class="dialog-ribbon-buttons">
+                <button class="dialog-ribbon-btn warning" onclick="restoreDatabase()">
+                    <i class="fas fa-upload"></i>
+                    Restore
+                </button>
+                <button class="dialog-ribbon-btn" onclick="closeDialog('restoreDatabaseDialog')">
+                    <i class="fas fa-times"></i>
+                    Batal
+                </button>
+            </div>
+        </div>
+        <div class="dialog-ribbon-group">
+            <div class="dialog-ribbon-title">File</div>
+            <div class="dialog-ribbon-buttons">
+                <button class="dialog-ribbon-btn" onclick="document.getElementById('restoreFile').click()">
+                    <i class="fas fa-folder-open"></i>
+                    Browse
+                </button>
+            </div>
+        </div>
+    </div>
+    
+    <div class="dialog-body with-ribbon">
+        <div class="dialog-content">
+            <div class="form-group">
+                <label class="modern-label">Pilih File Backup</label>
+                <input type="file" class="modern-input" id="restoreFile" accept=".json" style="display: none">
+                <div style="display: flex; gap: 8px; align-items: center;">
+                    <input type="text" class="modern-input" id="restoreFileName" placeholder="Pilih file backup..." readonly style="flex: 1">
+                    <button class="dialog-ribbon-btn" onclick="document.getElementById('restoreFile').click()">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+            </div>
+            <div style="padding: 12px; background: #fff3cd; border: 1px solid #ffeaa7; border-radius: 4px; margin-top: 16px;">
+                <small style="color: #856404;">
+                    <i class="fas fa-exclamation-triangle"></i>
+                    <strong>Peringatan:</strong> Restore akan mengganti semua data yang ada dengan data dari file backup.
+                </small>
+            </div>
+        </div>
+    </div>
+    
+    <div class="dialog-footer">
+        <div class="dialog-footer-left">
+            <span>Sistem Administrasi Guru • Office 2024 v3.2</span>
+            <span id="restoreDialogDate">Loading...</span>
+        </div>
+    </div>
+</div>

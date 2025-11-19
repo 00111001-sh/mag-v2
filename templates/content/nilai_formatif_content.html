@@ -1,0 +1,58 @@
+<div class="modern-card">
+    <div class="card-header">
+        <h2>Input Nilai Formatif</h2>
+        <div class="card-actions">
+            <button class="action-btn" onclick="app.modules.nilai.loadDataFormatif()" title="Refresh Data">
+                <i class="fas fa-sync-alt"></i>
+            </button>
+        </div>
+    </div>
+    <div class="card-body">
+        <!-- Initial State - Before Data Loaded -->
+        <div id="formatifInitialState" class="initial-state-modern">
+            <div class="initial-icon">
+                <i class="fas fa-edit"></i>
+            </div>
+            <div class="initial-title">Nilai Formatif</div>
+            <div class="initial-subtitle">
+                Pilih kelas, materi, dan tanggal, lalu klik "Tampilkan" di ribbon untuk memuat data nilai formatif
+            </div>
+            <div class="initial-hint">
+                <div class="hint-item">
+                    <i class="fas fa-info-circle"></i>
+                    Nilai formatif adalah penilaian harian/evaluasi proses pembelajaran
+                </div>
+                <div class="hint-item">
+                    <i class="fas fa-mouse-pointer"></i>
+                    Klik tombol "Tampilkan" di panel ribbon atas
+                </div>
+                <div class="hint-item">
+                    <i class="fas fa-keyboard"></i>
+                    Input nilai dengan range 0-100, akan tersimpan otomatis
+                </div>
+            </div>
+        </div>
+
+        <!-- Table Container (Hidden by default) -->
+        <div id="formatifTableContainer" class="table-container" style="display: none;">
+            <table class="modern-table">
+                <thead>
+                    <tr>
+                        <th width="50">No</th>
+                        <th>Nama Siswa</th>
+                        <th width="100">Kelas</th>
+                        <th width="150">Nilai Formatif</th>
+                    </tr>
+                </thead>
+                <tbody id="nilaiTable">
+                    <!-- Data akan diisi oleh JavaScript -->
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Summary (Hidden by default) -->
+        <div id="summaryNilaiFormatif" class="status-summary-modern" style="display: none;">
+            <!-- Summary akan diisi oleh JavaScript -->
+        </div>
+    </div>
+</div>

@@ -1,0 +1,42 @@
+:root {
+    /* Office Colors */
+    --office-blue: #2B579A;
+    --office-blue-dark: #1E3F6B;
+    --office-blue-light: #4F7BC6;
+    --office-gray-light: #F3F3F3;
+    --office-gray-medium: #E1E1E1;
+    --office-gray-dark: #D0D0D0;
+    --office-text: #323130;
+    --office-text-light: #605E5C;
+    --office-border: #EDEBE9;
+    --office-accent: #0078D4;
+    --office-success: #107C10;
+    --office-warning: #D83B01;
+    --office-danger: #A4262C;
+    
+    /* Shadows */
+    --office-shadow: 0 1.6px 3.6px 0 rgba(0,0,0,.132),0 0.3px 0.9px 0 rgba(0,0,0,.108);
+    --office-shadow-lg: 0 6.4px 14.4px 0 rgba(0,0,0,.132),0 1.2px 3.6px 0 rgba(0,0,0,.108);
+    
+    /* Theme Colors */
+    --theme-blue: #2B579A;
+    --theme-green: #107C10;
+    --theme-purple: #5C2D91;
+    --theme-red: #D83B01;
+    --theme-dark: #323130;
+    
+    /* Pastel Colors */
+    --theme-pastel-blue: #6A8DE8;
+    --theme-pastel-green: #5DBE7E;
+    --theme-pastel-purple: #9D7AD6;
+    --theme-pastel-pink: #E87CA7;
+    --theme-pastel-orange: #FF9E6D;
+    --theme-pastel-teal: #4ECDC4;
+    --theme-pastel-lavender: #B19CD9;
+    --theme-pastel-mint: #77DD77;
+    --theme-pastel-coral: #FF6B6B;
+    --theme-pastel-sky: #87CEEB;
+    
+    /* Icon Color */
+    --icon-color: #2B579A;
+}

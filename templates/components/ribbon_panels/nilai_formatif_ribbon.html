@@ -1,0 +1,49 @@
+<div class="ribbon-panel" data-tab="nilaiFormatif">
+    <div class="ribbon-group">
+        <div class="ribbon-title">Filter</div>
+        <div class="ribbon-filters">
+            <div class="filter-item">
+                <label>Kelas</label>
+                <select class="ribbon-select" id="filterKelasNilai">
+                    <option value="X IPA 1">X IPA 1</option>
+                    <option value="X IPA 2">X IPA 2</option>
+                    <option value="XI IPA 1">XI IPA 1</option>
+                </select>
+            </div>
+            <div class="filter-item">
+                <label>Materi</label>
+                <select class="ribbon-select" id="filterMateriNilai">
+                    <option value="Aljabar">Aljabar</option>
+                    <option value="Geometri">Geometri</option>
+                    <option value="Trigonometri">Trigonometri</option>
+                    <option value="Listrik Statis">Listrik Statis</option>
+                    <option value="Rangkaian Seri Paralel">Rangkaian Seri Paralel</option>
+                </select>
+            </div>
+            <div class="filter-item">
+                <label>Tanggal</label>
+                <input type="date" class="ribbon-input" id="tanggalNilai">
+            </div>
+        </div>
+    </div>
+    <div class="ribbon-group">
+        <div class="ribbon-title">Aksi</div>
+        <div class="ribbon-buttons">
+            <button class="ribbon-btn" onclick="loadDataNilaiFormatif()">
+                <i class="fas fa-sync"></i>
+                <span>Tampilkan</span>
+            </button>
+            <button class="ribbon-btn" onclick="simpanNilaiFormatif()">
+                <i class="fas fa-save"></i>
+                <span>Simpan</span>
+            </button>
+        </div>
+    </div>
+    <div class="ribbon-group">
+        <div class="ribbon-title">Info</div>
+        <div style="font-size: 11px; color: var(--office-text-light); line-height: 1.4;">
+            <div>Range Nilai: <strong>0-100</strong></div>
+            <div>Tersimpan: <strong id="ribbonSavedFormatif">Auto-save</strong></div>
+        </div>
+    </div>
+</div>

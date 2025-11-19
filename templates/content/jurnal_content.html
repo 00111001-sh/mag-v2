@@ -1,0 +1,56 @@
+<div class="modern-card">
+    <div class="card-header">
+        <h2>Jurnal Mengajar</h2>
+        <div class="card-actions">
+            <button class="action-btn" onclick="app.modules.jurnal.loadData()" title="Refresh Data">
+                <i class="fas fa-sync-alt"></i>
+            </button>
+        </div>
+    </div>
+    <div class="card-body">
+        <!-- Initial State - Before Data Loaded -->
+        <div id="jurnalInitialState" class="initial-state-modern">
+            <div class="initial-icon">
+                <i class="fas fa-book"></i>
+            </div>
+            <div class="initial-title">Jurnal Mengajar</div>
+            <div class="initial-subtitle">
+                Pilih filter kelas, bulan, dan tahun, lalu klik "Tampilkan" di ribbon untuk memuat data jurnal
+            </div>
+            <div class="initial-hint">
+                <div class="hint-item">
+                    <i class="fas fa-info-circle"></i>
+                    Jurnal mengajar mencatat aktivitas pembelajaran harian
+                </div>
+                <div class="hint-item">
+                    <i class="fas fa-mouse-pointer"></i>
+                    Klik tombol "Tampilkan" di panel ribbon atas
+                </div>
+                <div class="hint-item">
+                    <i class="fas fa-plus-circle"></i>
+                    Klik "Tambah" untuk membuat jurnal mengajar baru
+                </div>
+            </div>
+        </div>
+
+        <!-- Table Container (Hidden by default) -->
+        <div id="jurnalTableContainer" class="table-container" style="display: none;">
+            <table class="modern-table">
+                <thead>
+                    <tr>
+                        <th width="50">No</th>
+                        <th width="80">Tanggal</th>
+                        <th width="100">Kelas</th>
+                        <th>Materi</th>
+                        <th>Topik Pelajaran</th>
+                        <th>Catatan</th>
+                        <th width="100">Aksi</th>
+                    </tr>
+                </thead>
+                <tbody id="jurnalTable">
+                    <!-- Data akan diisi oleh JavaScript -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

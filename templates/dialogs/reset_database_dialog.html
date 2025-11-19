@@ -1,0 +1,52 @@
+<div class="modern-dialog" id="resetDatabaseDialog">
+    <div class="dialog-header">
+        <h3>Reset Database</h3>
+        <button class="dialog-close" onclick="closeDialog('resetDatabaseDialog')">
+            <i class="fas fa-times"></i>
+        </button>
+    </div>
+    
+    <!-- Dialog Ribbon -->
+    <div class="dialog-ribbon">
+        <div class="dialog-ribbon-group">
+            <div class="dialog-ribbon-title">Danger Zone</div>
+            <div class="dialog-ribbon-buttons">
+                <button class="dialog-ribbon-btn danger" onclick="resetDatabase()">
+                    <i class="fas fa-trash"></i>
+                    Reset Database
+                </button>
+                <button class="dialog-ribbon-btn" onclick="closeDialog('resetDatabaseDialog')">
+                    <i class="fas fa-times"></i>
+                    Batal
+                </button>
+            </div>
+        </div>
+    </div>
+    
+    <div class="dialog-body with-ribbon">
+        <div class="dialog-content">
+            <div style="text-align: center; padding: 20px;">
+                <i class="fas fa-exclamation-triangle" style="font-size: 48px; color: var(--office-warning); margin-bottom: 16px;"></i>
+                <h4 style="color: var(--office-warning); margin-bottom: 12px;">PERINGATAN!</h4>
+                <p style="color: var(--office-text-light); line-height: 1.5;">
+                    Tindakan ini akan menghapus <strong>SEMUA DATA</strong> termasuk:<br>
+                    • Data Siswa<br>
+                    • Data Kelas<br>
+                    • Data Nilai<br>
+                    • Data Absensi<br>
+                    • Dan semua data lainnya
+                </p>
+                <p style="color: var(--office-danger); font-weight: bold; margin-top: 16px;">
+                    Tindakan ini tidak dapat dibatalkan!
+                </p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="dialog-footer">
+        <div class="dialog-footer-left">
+            <span>Sistem Administrasi Guru • Office 2024 v3.2</span>
+            <span id="resetDialogDate">Loading...</span>
+        </div>
+    </div>
+</div>

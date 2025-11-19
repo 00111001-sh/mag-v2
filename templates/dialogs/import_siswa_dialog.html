@@ -1,0 +1,57 @@
+<div class="modern-dialog" id="importSiswaDialog">
+    <div class="dialog-header">
+        <h3>Import Siswa dari CSV</h3>
+        <button class="dialog-close" onclick="closeDialog('importSiswaDialog')">
+            <i class="fas fa-times"></i>
+        </button>
+    </div>
+
+    <!-- Dialog Ribbon -->
+    <div class="dialog-ribbon">
+        <div class="dialog-ribbon-group">
+            <div class="dialog-ribbon-title">Actions</div>
+            <div class="dialog-ribbon-buttons">
+                <button class="dialog-ribbon-btn warning" onclick="importSiswa()">
+                    <i class="fas fa-upload"></i>
+                    Import Siswa
+                </button>
+                <button class="dialog-ribbon-btn" onclick="closeDialog('importSiswaDialog')">
+                    <i class="fas fa-times"></i>
+                    Batal
+                </button>
+            </div>
+        </div>
+        <div class="dialog-ribbon-group">
+            <div class="dialog-ribbon-title">File</div>
+            <div class="dialog-ribbon-buttons">
+                <button class="dialog-ribbon-btn" onclick="document.getElementById('fileImportSiswa').click()" accept=".csv">
+                    <i class="fas fa-folder-open"></i>
+                    Browse
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="dialog-body with-ribbon">
+        <div class="dialog-content">
+            <div class="form-group">
+                <label class="modern-label">Pilih File CSV</label>
+                <input type="file" class="modern-input" id="fileImportSiswa" accept=".csv">
+            </div>
+            <div class="form-group">
+                <label class="modern-label">Format CSV yang didukung:</label>
+                <div style="font-size: 12px; color: var(--office-text-light); margin-top: 5px;">
+                    NISN, Nama, Kelas<br>
+                    Contoh: 1234567890, Ahmad Rizki, X IPA 1
+                </div>
+            </div>
+        </div>
+    </div>
+  
+    <div class="dialog-footer">
+        <div class="dialog-footer-left">
+            <span>Sistem Administrasi Guru • Office 2024 v3.2</span>
+            <span id="importSiswaDialog">Loading...</span>
+        </div>
+    </div>
+</div>
